@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 20025146062551995}
   - component: {fileID: 20025146062551993}
   - component: {fileID: 1643161822311102859}
+  - component: {fileID: -7746593423393109285}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -100,6 +101,10 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 10
   projectileFiringPeriod: 0.1
+  deathSound: {fileID: 8300000, guid: 7ab72e1e769e8764e8750bfabf207adf, type: 3}
+  deathSoundVolume: 0.5
+  shootSound: {fileID: 8300000, guid: c702cff73bafcd6468b0d9b61def8d3f, type: 3}
+  shootSoundVolume: 0.5
 --- !u!58 &1643161822311102859
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -116,3 +121,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.06306225}
   serializedVersion: 2
   m_Radius: 0.43193775
+--- !u!114 &-7746593423393109285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20025146062551994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4406b9fe04efed740a8c8c5731f5189c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100

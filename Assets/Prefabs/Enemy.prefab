@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2964706201051243692}
   - component: {fileID: 3136862084478347432}
   - component: {fileID: 208335383576403024}
+  - component: {fileID: -4797243182457523278}
+  - component: {fileID: -7477286280709061697}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -109,9 +111,15 @@ MonoBehaviour:
   health: 100
   laserPrefab: {fileID: 4764994346113419187, guid: 94cf146f10e352242894683e9e8b7123,
     type: 3}
+  explosionPrefab: {fileID: 4602172688461608699, guid: ec6d0b12f92de1b449facc50350bd219,
+    type: 3}
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   projectileSpeed: 10
+  deathSound: {fileID: 8300000, guid: 7ab72e1e769e8764e8750bfabf207adf, type: 3}
+  deathSoundVolume: 0.5
+  laserSound: {fileID: 8300000, guid: 45c5c78915f076a479f43a91f6a8749c, type: 3}
+  laserSoundVolume: 0.5
   shotCounter: 0
 --- !u!58 &208335383576403024
 CircleCollider2D:
@@ -123,9 +131,43 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0022720098, y: 0.06361568}
   serializedVersion: 2
   m_Radius: 0.41274422
+--- !u!50 &-4797243182457523278
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5664910331525376574}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-7477286280709061697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5664910331525376574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4406b9fe04efed740a8c8c5731f5189c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
