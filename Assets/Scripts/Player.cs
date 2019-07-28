@@ -103,4 +103,9 @@ public class Player : MonoBehaviour
             FindObjectOfType<SceneLoader>().LoadGameOver();
         }
     }
+
+    public int GetHealth()
+    {
+        return health;
+    }
 }
